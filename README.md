@@ -36,4 +36,3 @@ Deploy on github:
 ```bash
 middleman deploy
 ```
-# lilu-showcase
