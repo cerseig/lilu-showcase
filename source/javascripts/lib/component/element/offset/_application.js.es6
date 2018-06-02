@@ -1,4 +1,3 @@
-
 Component.Element.Offset.Application = class Offset extends Component.Element.Offset {
   get top() {
     return 0

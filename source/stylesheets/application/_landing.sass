@@ -6,10 +6,12 @@
   align-items: center
   padding: 20px 0
   position: relative
+
   &__head
     width: 100px
     height: 100%
     position: relative
+
   &__logo
     position: absolute
     top: 0
@@ -19,6 +21,7 @@
     font-size: 25px
     writing-mode: vertical-lr
     transform: rotate(180deg) translateX(50%)
+
   &__section
     position: absolute
     bottom: 0
@@ -29,28 +32,35 @@
     text-transform: uppercase
     writing-mode: vertical-lr
     transform: rotate(180deg) translateX(50%)
+
     &:before
       content: '∙'
       font-size: 60px
       color: $orange
+
   &__wrapper
     width: 100%
     height: 100%
     display: flex
     justify-content: center
     align-content: center
+
   &__part
     height: calc(100% - 100px)
     position: relative
     padding: 50px
+
     &:nth-child(1)
       margin-right: 10px
+
     &:nth-child(2)
       margin-left: 10px
+
   &__background
     background-position: center
     background-repeat: no-repeat
     background-size: cover
+
   &__title
     color: $blue
     font-weight: 800
@@ -59,9 +69,11 @@
     text-transform: uppercase
     margin-bottom: 30px
     line-height: 35px
+
   &__description
     color: $blue
     line-height: 25px
+
   &__items
     color: $blue
     display: flex
@@ -70,25 +82,31 @@
     position: absolute
     bottom: 50px
     width: calc(100% - 100px)
-    &.landing__steps
-      position: relative
-      bottom: initial
+
+  &__steps
+    position: relative
+    bottom: initial
+
   &__item
     text-align: center
     flex: 1
+
   &__item-symbol
     width: 5px
     height: 5px
     border-radius: 50%
     background: $orange
     margin: 10px auto
+
   &__item-title
     font-size: 10px
     letter-spacing: 1px
     line-height: 14px
+
   &__process
     position: absolute
     bottom: 50px
+
   &__play-button
     background: $orange
     width: 100px
@@ -101,7 +119,8 @@
     display: flex
     align-content: center
     justify-content: center
-    &-icon
+
+    &--icon
       width: 0
       height: 0
       border-top: 25px solid transparent
@@ -109,12 +128,14 @@
       border-left: 35px solid $white
       margin-top: 25px
       margin-left: 10px
+
   &__navigation
     width: 50px
     height: 100%
     display: flex
     justify-content: center
     align-items: center
+
   &__link
     width: 8px
     height: 8px
@@ -124,13 +145,17 @@
     margin: 50px auto
     cursor: pointer
     transition: all 0.5s ease
-    &.active
+
+    &--active
       background: $orange
       width: 15px
       height: 15px
+
   .orange-emphasis
     color: $orange
+
   .white
     background: $white
+
   .blue
     background: $dark-blue
