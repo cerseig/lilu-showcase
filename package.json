@@ -1,5 +1,5 @@
 {
-  "name": "middleman-app",
+  "name": "lilu-showcase",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,9 +11,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://www.github.com/juliendargelos/middleman-app"
+    "url": "https://github.com/cerseig/lilu-showcase"
   },
-  "author": "Julien Dargelos",
+  "author": "Circé Grand, Julien Dargelos",
   "license": "MIT",
   "dependencies": {
     "smoothscroll-polyfill": "^0.4.0"
