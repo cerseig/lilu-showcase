@@ -43,6 +43,7 @@
     height: calc(100% - 100px)
     position: relative
     padding: 50px
+    overflow: hidden
     &:nth-child(1)
       margin-right: 10px
     &:nth-child(2)
@@ -66,29 +67,47 @@
     color: $blue
     display: flex
     justify-content: center
-    align-items: center
     position: absolute
     bottom: 50px
     width: calc(100% - 100px)
     &.landing__steps
       position: relative
       bottom: initial
+      width: 100%
+      &:first-child
+        margin-bottom: 50px
+      &:last-child
+        .landing__line
+          right: 0
+          left: initial
   &__item
     text-align: center
     flex: 1
   &__item-symbol
-    width: 5px
-    height: 5px
+    width: 7px
+    height: 7px
     border-radius: 50%
     background: $orange
     margin: 10px auto
+    transition: all 0.5s ease
   &__item-title
     font-size: 10px
     letter-spacing: 1px
     line-height: 14px
+    width: 65px
+    margin: 0 auto
   &__process
+    width: 100%
     position: absolute
     bottom: 50px
+    left: 0
+  &__line
+    width: 83%
+    height: 1px
+    background: $orange
+    position: absolute
+    top: 28px
+    left: 0
   &__play-button
     background: $orange
     width: 100px
