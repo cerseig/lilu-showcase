@@ -1,16 +1,14 @@
 .landing
   width: 100%
   height: calc(100% - 40px)
-  display: flex
-  justify-content: center
-  align-items: center
   padding: 20px 0
   position: relative
 
   &__head
     width: 100px
-    height: 100%
-    position: relative
+    height: calc(100% - 40px)
+    position: fixed
+    left: 0
 
   &__logo
     position: absolute
@@ -38,12 +36,18 @@
       font-size: 60px
       color: $orange
 
+  &__container
+    width: calc(100% - 150px)
+    height: 100%
+    margin-left: 100px
+
   &__wrapper
     width: 100%
     height: 100%
     display: flex
     justify-content: center
     align-content: center
+    margin-bottom: 20px
 
   &__part
     height: calc(100% - 100px)
@@ -62,7 +66,6 @@
     background-size: cover
 
   &__title
-    color: $blue
     font-weight: 800
     letter-spacing: 2px
     font-size: 30px
@@ -71,8 +74,11 @@
     line-height: 35px
 
   &__description
-    color: $blue
     line-height: 25px
+    &:last-child
+      font-weight: 400
+      margin-top: 20px
+      font-size: 13px
 
   &__items
     color: $blue
@@ -91,9 +97,11 @@
         .landing__line
           right: 0
           left: initial
+
   &__steps
     position: relative
     bottom: initial
+
   &__item
     text-align: center
     flex: 1
@@ -105,17 +113,20 @@
     background: $orange
     margin: 10px auto
     transition: all 0.5s ease
+
   &__item-title
     font-size: 10px
     letter-spacing: 1px
     line-height: 14px
-    width: 65px
+    width: 90%
     margin: 0 auto
+
   &__process
     width: 100%
     position: absolute
     bottom: 50px
     left: 0
+
   &__line
     width: 83%
     height: 1px
@@ -123,6 +134,7 @@
     position: absolute
     top: 28px
     left: 0
+
   &__play-button
     background: $orange
     width: 100px
@@ -151,6 +163,9 @@
     display: flex
     justify-content: center
     align-items: center
+    position: fixed
+    right: 0
+    top: 0
 
   &__link
     width: 8px
@@ -167,11 +182,36 @@
       width: 15px
       height: 15px
 
+  &__example
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    text-align: center
+
+  &__gif
+    width: 100px
+
+  &__draw-cta
+    background: $orange
+    border: none
+    text-transform: uppercase
+    color: $white
+    font-family: $open-sans
+    font-weight: 600
+    letter-spacing: 1px
+    width: 160px
+    padding: 10px
+    border-radius: 30px
+    margin-top: 20px
+
   .orange-emphasis
     color: $orange
 
   .white
     background: $white
+    color: $blue
 
   .blue
     background: $dark-blue
+    color: $white
