@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Lilu</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css">
     <%= stylesheet_link_tag :application %>
   </head>
   <body>
@@ -11,7 +12,14 @@
 
     <%= javascript_include_tag :application %>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
+
     <script>
+      $(document).ready(function() {
+        console.log('test');
+        $('#landing__container').fullpage();
+      });
       Application.init();
     </script>
   </body>
