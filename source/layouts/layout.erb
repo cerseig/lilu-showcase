@@ -18,7 +18,30 @@
     <script>
       $(document).ready(function() {
         console.log('test');
-        $('#landing__container').fullpage();
+        $('#landing__container').fullpage({
+          anchors: ['concept', 'how-it-works', 'user-test', 'team'],
+  				navigation: true,
+  				navigationPosition: 'right',
+  				navigationTooltips: ['Concept', 'How it works', 'User test', 'Team'],
+          showActiveTooltip: false,
+          scrollingSpeed: 1000,
+
+          afterLoad: function(anchorLink, index){
+        		var loadedSection = $(this);
+            if(index == 1){
+              $('.landing__section').text('LI.LU ?');
+        		}
+            if(index == 2){
+              $('.landing__section').text('Comment ça marche ?');
+        		}
+        		if(index == 3){
+              $('.landing__section').text('Testé, approuvé');
+        		}
+            if(index == 4){
+              $('.landing__section').text('Contact');
+        		}
+        	}
+        });
       });
       Application.init();
     </script>
