@@ -60,6 +60,15 @@
     &:nth-child(2)
       margin-left: 10px
 
+  &__full
+    height: calc(100% - 40px)
+    width: 100%
+    position: relative
+    overflow: hidden
+    display: flex
+    justify-content: center
+    align-items: center
+
   &__illu1
     opacity: 0.1
     position: absolute
@@ -101,49 +110,9 @@
       margin-top: 20px
       font-size: 13px
 
-  &__items
-    color: $blue
-    display: flex
-    justify-content: center
-    position: absolute
-    bottom: 50px
-    width: calc(100% - 100px)
-    &.landing__steps
-      position: relative
-      bottom: initial
-      width: 100%
-      &:first-child
-        margin-bottom: 50px
-      &:last-child
-        .landing__line
-          left: 0
-          right: initial
-
   &__steps
     position: relative
     bottom: initial
-
-  &__item
-    text-align: center
-    flex: 1
-
-  &__item-number
-    font-family: $ysra
-
-  &__item-symbol
-    width: 7px
-    height: 7px
-    border-radius: 50%
-    background: $orange
-    margin: 10px auto
-    transition: all 0.5s ease
-
-  &__item-title
-    font-size: 10px
-    letter-spacing: 1px
-    line-height: 14px
-    width: 90%
-    margin: 0 auto
 
   &__process
     width: 100%
@@ -245,6 +214,19 @@
     left: 0
     width: 100%
     height: 100%
+
+  &__advertising
+    text-align: center
+
+  &__advertising-title
+    text-transform: uppercase
+    font-size: 30px
+    font-weight: 700
+    letter-spacing: 1px
+    margin-bottom: 50px
+
+  &__advertising-icon
+    width: 80px
 
   .orange-emphasis
     color: $orange

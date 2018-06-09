@@ -8,26 +8,26 @@
   <div class="landing__container" id="landing__container">
     <section class="section landing__wrapper landing__concept">
       <div class="landing__part white" style="width:40%">
-        <img class="landing__illu1" src="images/icons/picto1.png">
+        <%= image_tag 'icons/picto1.png', class: :landing__illu1 %>
         <div class="landing__content">
           <h1 class="landing__title">LI.LU ?</h1>
           <p class="landing__description"><span class="orange-emphasis">LI.LU</span> est une application de lecture partagée, conçue pour les enfants de 8 à 10 ans. L’interaction se fait grâce aux dessins.<br><span class="orange-emphasis">Nos valeurs</span> sont les suivantes</p>
         </div>
-        <ul class="landing__items">
-          <li class="landing__item">
-            <div class="landing__item-number">01</div>
-            <div class="landing__item-symbol"></div>
-            <div class="landing__item-title">LE <br>FUN</div>
+        <ul class="items">
+          <li class="item">
+            <div class="item__number">01</div>
+            <div class="item__symbol"></div>
+            <div class="item__title">LE <br>FUN</div>
           </li>
-          <li class="landing__item">
-            <div class="landing__item-number">02</div>
-            <div class="landing__item-symbol"></div>
-            <div class="landing__item-title">LE <br>PARTAGE</div>
+          <li class="item">
+            <div class="item__number">02</div>
+            <div class="item__symbol"></div>
+            <div class="item__title">LE <br>PARTAGE</div>
           </li>
-          <li class="landing__item">
-            <div class="landing__item-number">03</div>
-            <div class="landing__item-symbol"></div>
-            <div class="landing__item-title">LA <br>SPONTANÉITÉ</div>
+          <li class="item">
+            <div class="item__number">03</div>
+            <div class="item__symbol"></div>
+            <div class="item__title">LA <br>SPONTANÉITÉ</div>
           </li>
         </ul>
       </div>
@@ -41,46 +41,46 @@
     <section class="section landing__wrapper landing__instructions">
       <div class="landing__part landing__background" style="width:50%;background-image:url('images/mockup.jpg')"></div>
       <div class="landing__part white" style="width:50%">
-        <img class="landing__illu2" src="images/icons/picto2.png">
+        <%= image_tag 'icons/picto2.png', class: :landing__illu2 %>
         <div class="landing__content">
           <h1 class="landing__title">Comment <br>ça marche ?</h1>
           <p class="landing__description">Afin de partager leur vision de l’histoire, les enfants rencontrent des challenges visuels au cour de leur lecture. Une fois le challenge relevé, les enfants peuvent découvrir l’interprétation de leur ami de lecture et réagir s’ils le souhaitent. </p>
         </div>
         <div class="landing__process">
-          <ul class="landing__items landing__steps">
+          <ul class="items landing__steps">
             <div class="landing__line"></div>
-            <li class="landing__item">
-              <div class="landing__item-number">01</div>
-              <div class="landing__item-symbol"></div>
-              <div class="landing__item-title">création <br>de l'avatar</div>
+            <li class="item">
+              <div class="item__number">01</div>
+              <div class="item__symbol"></div>
+              <div class="item__title">création <br>de l'avatar</div>
             </li>
-            <li class="landing__item">
-              <div class="landing__item-number">02</div>
-              <div class="landing__item-symbol"></div>
-              <div class="landing__item-title">temps de <br>lecture</div>
+            <li class="item">
+              <div class="item__number">02</div>
+              <div class="item__symbol"></div>
+              <div class="item__title">temps de <br>lecture</div>
             </li>
-            <li class="landing__item">
-              <div class="landing__item-number">03</div>
-              <div class="landing__item-symbol"></div>
-              <div class="landing__item-title">challenge <br>dessin</div>
+            <li class="item">
+              <div class="item__number">03</div>
+              <div class="item__symbol"></div>
+              <div class="item__title">challenge <br>dessin</div>
             </li>
           </ul>
-          <ul class="landing__items landing__steps">
+          <ul class="items landing__steps">
             <div class="landing__line"></div>
-            <li class="landing__item">
-              <div class="landing__item-number">04</div>
-              <div class="landing__item-symbol"></div>
-              <div class="landing__item-title">découverte du <br>dessin de l'autre</div>
+            <li class="item">
+              <div class="item__number">04</div>
+              <div class="item__symbol"></div>
+              <div class="item__title">découverte du <br>dessin de l'autre</div>
             </li>
-            <li class="landing__item">
-              <div class="landing__item-number">05</div>
-              <div class="landing__item-symbol"></div>
-              <div class="landing__item-title">réaction <br>via émojis</div>
+            <li class="item">
+              <div class="item__number">05</div>
+              <div class="item__symbol"></div>
+              <div class="item__title">réaction <br>via émojis</div>
             </li>
-            <li class="landing__item">
-              <div class="landing__item-number">06</div>
-              <div class="landing__item-symbol"></div>
-              <div class="landing__item-title">reprise <br>lecture</div>
+            <li class="item">
+              <div class="item__number">06</div>
+              <div class="item__symbol"></div>
+              <div class="item__title">reprise <br>lecture</div>
             </li>
           </ul>
         </div>
@@ -89,27 +89,27 @@
 
     <section class="section landing__wrapper landing__user-test">
       <div class="landing__part white" style="width:60%">
-        <img class="landing__illu3" src="images/icons/picto3.png">
+        <%= image_tag 'icons/picto3.png', class: :landing__illu3 %>
         <div class="landing__content">
           <h1 class="landing__title">Testé, approuvé</h1>
           <p class="landing__description">Nous avons réalisé un user test auprès de 20 écoliers du CE2/CM2 âgés de 8 à 11 ans à l’école primaire de Valsonne.</p>
           <p class="landing__description">3 extraits de Fantastique Maître renard sont présentés aux binômes, s’ensuivent 3 consignes pour illustrer les différents passages. Une consigne figurative, une abstraite et une complémentaire. Après avoir achevé leur ouvrage, les binômes échangent leur dessins et annotent celui de leur partenaire avec des emojis. </p>
         </div>
-        <ul class="landing__items">
-          <li class="landing__item">
-            <div class="landing__item-number">100%</div>
-            <div class="landing__item-symbol"></div>
-            <div class="landing__item-title">ont aimé comparer leur dessin avec celui de leur partenaire</div>
+        <ul class="items">
+          <li class="item">
+            <div class="item__number">100%</div>
+            <div class="item__symbol"></div>
+            <div class="item__title">ont aimé comparer leur dessin avec celui de leur partenaire</div>
           </li>
-          <li class="landing__item">
-            <div class="landing__item-number">100%</div>
-            <div class="landing__item-symbol"></div>
-            <div class="landing__item-title">ont aimé lire une histoire avec un autre enfant.</div>
+          <li class="item">
+            <div class="item__number">100%</div>
+            <div class="item__symbol"></div>
+            <div class="item__title">ont aimé lire une histoire avec un autre enfant.</div>
           </li>
-          <li class="landing__item">
-            <div class="landing__item-number">95%</div>
-            <div class="landing__item-symbol"></div>
-            <div class="landing__item-title">aimeraient recommencer l’expérience</div>
+          <li class="item">
+            <div class="item__number">95%</div>
+            <div class="item__symbol"></div>
+            <div class="item__title">aimeraient recommencer l’expérience</div>
           </li>
         </ul>
       </div>
@@ -120,7 +120,7 @@
       <div class="landing__part white" style="width:50%">
         <canvas class="landing__canvas" id="canvas"></canvas>
         <div class="landing__example" style="display:none">
-          <img class="landing__gif" src="images/smiley.gif">
+          <%= image_tag 'smiley.gif', class: :landing__gif %>
           <button class="landing__draw-cta" type="button" name="button">Un petit dessin pour la fin</button>
         </div>
       </div>
@@ -218,15 +218,18 @@
         </div>
       </div>
     </section>
+
+    <section class="section landing__wrapper landing__application">
+      <div class="landing__full">
+        <div class="landing__advertising">
+          <h1 class="landing__advertising-title">Il est temps, rejoins LI.<span class="orange-emphasis">LU</span> !</h1>
+          <%= image_tag 'icons/library.svg', class: 'landing__advertising-icon' %>
+        </div>
+      </div>
+    </section>
+
   </div>
 
-  <div class="landing__navigation">
-    <!-- <ul class="landing__timeline">
-      <li class="landing__link landing__link--active"></li>
-      <li class="landing__link"></li>
-      <li class="landing__link"></li>
-      <li class="landing__link"></li>
-    </ul> -->
-  </div>
+  <div class="landing__navigation"></div>
 
 </div>
