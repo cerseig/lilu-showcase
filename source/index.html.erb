@@ -123,6 +123,25 @@
     <section class="section landing__wrapper landing__contact">
       <div class="landing__part landing__part--half white">
         <canvas class="landing__canvas" id="canvas"></canvas>
+        <div class="canvas" id="sidebar">
+          <div class="colorButtons">
+            <h3>Couleur</h3>
+            <input type="color" id="colorpicker" value="#000000" class="colorpicker">
+          </div>
+          <div class="toolsButtons">
+            <h3>Outils</h3>
+            <button id="eraser">Gomme</button>
+            <button id="clear">Tout effacer</button>
+          </div>
+
+          <div class="buttonSize">
+            <h3>Size (<span id="showSize">5</span>)</h3>
+            <input type="range" min="1" max="50" value="5" step="1" id="controlSize">
+          </div>
+          <div class="extra">
+            <a id="saveToImage" class="btn btn-warning">Télécharger</a>
+          </div>
+        </div>
         <div class="landing__example" style="display:none">
           <%= image_tag 'smiley.gif', class: :landing__gif %>
           <button class="landing__draw-cta" type="button" name="button">Un petit dessin pour la fin</button>
