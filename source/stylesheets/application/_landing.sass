@@ -233,11 +233,12 @@
   &__squad
     display: flex
     justify-content: center
+    margin-top: 40px
 
   &__profils
     flex: 1
     &:last-child
-      margin-top: -60px
+      margin-top: -50px
 
   &__canvas
     position: absolute
@@ -284,6 +285,13 @@
       line-height: 1.8em
       font-size: 1em
 
+    &__squad
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 100%
+
 @media screen and (min-width: 765px)
   .landing
     width: 100%
@@ -296,6 +304,7 @@
       height: calc(100% - 40px)
       position: fixed
       left: 0
+      top: initial
 
     &__logo
       position: absolute
@@ -306,6 +315,7 @@
       font-size: 25px
       writing-mode: vertical-lr
       transform: rotate(180deg) translateX(50%)
+      right: initial
 
     &__section
       position: absolute
@@ -337,15 +347,21 @@
       margin-bottom: 20px
 
     &__part
-      height: calc(100% - 140px)
+      height: 100%
       position: relative
       padding: 50px
       overflow: hidden
+      top: 0
+      display: block!important
+
       &:nth-child(1)
         margin-right: 10px
+        margin-bottom: 0
+        height: calc(100% - 50px)!important
 
       &:nth-child(2)
         margin-left: 10px
+        height: calc(100% - 50px)!important
 
       &--larger
         width: 60%
@@ -401,6 +417,7 @@
 
     &__description
       line-height: 25px
+
       &:last-child
         font-weight: 400
         margin-top: 20px
@@ -415,6 +432,7 @@
       position: absolute
       bottom: 50px
       left: 0
+      display: block
 
     &__results
       display: block
@@ -499,13 +517,14 @@
       display: block
 
     &__squad
+      padding-top: 40px
       display: flex
       justify-content: center
 
     &__profils
       flex: 1
       &:last-child
-        margin-top: -60px
+        margin-top: -80px
 
     &__canvas
       position: absolute
@@ -523,17 +542,7 @@
       font-weight: 700
       letter-spacing: 1px
       margin-bottom: 50px
+      line-height: 40px
 
     &__advertising-icon
       width: 80px
-
-    .orange-emphasis
-      color: $orange
-
-    .white
-      background: $white
-      color: $blue
-
-    .blue
-      background: $dark-blue
-      color: $white
