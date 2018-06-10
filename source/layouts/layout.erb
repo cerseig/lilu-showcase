@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Lilu</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css">
     <%= stylesheet_link_tag :application %>
   </head>
@@ -17,7 +18,9 @@
 
     <script>
       $(document).ready(function() {
+
         console.log('test');
+
         $('#landing__container').fullpage({
           anchors: ['concept', 'how-it-works', 'user-test', 'team', 'application'],
   				navigation: true,
@@ -46,37 +49,40 @@
         	}
         });
 
-        // SETTING ALL VARIABLES
+        $('.landing__draw-cta').on('click', function(){
+          console.log('test click button');
+          $('.landing__example').css('opacity', '0')
+          setTimeout(function(){
+            $('.landing__example').css('display', 'none')
+          }, 500);
+        })
 
+        // SETTING ALL VARIABLES
         var isMouseDown = false;
         var canvas = document.querySelector('#canvas')
         var ctx = canvas.getContext("2d")
+        canvas.style.width ='100%';
+        canvas.style.height='100%';
+        canvas.width  = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
         var linesArray = [];
         currentSize = 5;
         var currentColor = "rgb(0,0,0)";
         var currentBg = "white";
 
         // INITIAL LAUNCH
-
         createCanvas();
 
         // BUTTON EVENT HANDLERS
-
         document.getElementById('colorpicker').addEventListener('change', function() {
           currentColor = this.value;
-        });
-        document.getElementById('controlSize').addEventListener('change', function() {
-          currentSize = this.value;
-          document.getElementById("showSize").innerHTML = this.value;
         });
         document.getElementById('saveToImage').addEventListener('click', function() {
           downloadCanvas(this, 'canvas', 'draw-lilu.png');
         }, false);
-        document.getElementById('eraser').addEventListener('click', eraser);
         document.getElementById('clear').addEventListener('click', createCanvas);
 
         // REDRAW
-
         function redraw() {
             for (var i = 1; i < linesArray.length; i++) {
               ctx.beginPath();
@@ -90,62 +96,45 @@
         }
 
         // DRAWING EVENT HANDLERS
-
         canvas.addEventListener('mousedown', function() {mousedown(canvas, event);});
         canvas.addEventListener('mousemove',function() {mousemove(canvas, event);});
         canvas.addEventListener('mouseup',mouseup);
 
         // CREATE CANVAS
-
         function createCanvas() {
-          var canvas = document.querySelector('#canvas')
-          var ctx = canvas.getContext("2d")
-          ctx.fillStyle = currentBg
-          ctx.clearRect(0, 0, canvas.width, canvas.height)
-        }
+    			ctx.fillStyle = currentBg;
+    			ctx.fillRect(0, 0, canvas.width, canvas.height);
+    		}
 
         // DOWNLOAD CANVAS
-
         function downloadCanvas(link, canvas, filename) {
           link.href = document.getElementById(canvas).toDataURL();
           link.download = filename;
         }
 
-        // ERASER HANDLING
-
-        function eraser() {
-          currentSize = 50;
-          currentColor = ctx.fillStyle
-        }
-
         // GET MOUSE POSITION
-
         function getMousePos(canvas, evt) {
-          var rect = canvas.getBoundingClientRect();
-          return {
-            x: evt.clientX - rect.left,
-            y: evt.clientY - rect.top
-          };
-        }
+    			var rect = canvas.getBoundingClientRect();
+    			return {
+    				x: evt.clientX - rect.left,
+    				y: evt.clientY - rect.top
+    			};
+    		}
 
         // ON MOUSE DOWN
-
         function mousedown(canvas, evt) {
           var mousePos = getMousePos(canvas, evt);
-          isMouseDown=true
+          isMouseDown = true
           var currentPosition = getMousePos(canvas, evt);
           ctx.moveTo(currentPosition.x, currentPosition.y)
           ctx.beginPath();
           ctx.lineWidth  = currentSize;
           ctx.lineCap = "round";
           ctx.strokeStyle = currentColor;
-
         }
 
         // ON MOUSE MOVE
-
         function mousemove(canvas, evt) {
-
           if(isMouseDown){
             var currentPosition = getMousePos(canvas, evt);
             ctx.lineTo(currentPosition.x, currentPosition.y)
@@ -155,7 +144,6 @@
         }
 
         // STORE DATA
-
         function store(x, y, s, c) {
           var line = {
             "x": x,
@@ -167,14 +155,15 @@
         }
 
         // ON MOUSE UP
-
         function mouseup() {
           isMouseDown=false
           store()
         }
 
       });
+
       Application.init();
+
     </script>
 
 
