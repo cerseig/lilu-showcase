@@ -60,9 +60,9 @@
   &__concept
     .landing__part
       &:first-child
-        height: 70%
+        height: 60%
       &:last-child
-        height: 30%
+        height: 40%
 
   &__instructions
     .landing__part
@@ -100,51 +100,63 @@
     position: absolute
     top: 10%
     right: -20px
-    width: 250px
+    width: 200px
 
   &__illu2
     opacity: 0.1
     position: absolute
     top: -50px
     left: -50px
-    width: 400px
+    width: 350px
 
   &__illu3
     opacity: 0.1
     position: absolute
     top: -150px
     right: -180px
-    width: 500px
+    width: 450px
 
   &__background
     background-position: center
     background-repeat: no-repeat
     background-size: cover
 
+  &__content
+    padding: 20px
+
   &__title
     font-weight: 800
     letter-spacing: 2px
-    font-size: 30px
+    font-size: 20px
     text-transform: uppercase
-    margin-bottom: 30px
-    line-height: 35px
+    margin-bottom: 20px
+    line-height: 30px
 
   &__description
-    line-height: 25px
-    &:last-child
-      font-weight: 400
-      margin-top: 20px
-      font-size: 13px
+    font-weight: 400
+    margin-top: 10px
+    font-size: 0.8em
+    line-height: 1.8em
+
+  &__hood
+    line-height: 1.5em
+    font-size: 0.9em
+    font-weight: 600
 
   &__steps
     position: relative
     bottom: initial
 
+  &__values
+    display: flex
+    justify-content: center
+    align-items: center
+
   &__process
-    width: 100%
-    position: absolute
-    bottom: 50px
-    left: 0
+    display: none
+
+  &__results
+    display: none
 
   &__line
     width: 83%
@@ -239,13 +251,15 @@
 
   &__advertising-title
     text-transform: uppercase
-    font-size: 30px
+    font-size: 25px
     font-weight: 700
     letter-spacing: 1px
-    margin-bottom: 50px
+    margin-bottom: 30px
+    line-height: 30px
+    width: 250px
 
   &__advertising-icon
-    width: 80px
+    width: 60px
 
   .orange-emphasis
     color: $orange
@@ -257,6 +271,18 @@
   .blue
     background: $dark-blue
     color: $white
+
+@media screen and (min-width: 340px)
+
+  .landing
+
+    &__description
+      font-size: 1em
+      line-height: 1.8em
+
+    &__hood
+      line-height: 1.8em
+      font-size: 1em
 
 @media screen and (min-width: 765px)
   .landing
@@ -389,6 +415,9 @@
       position: absolute
       bottom: 50px
       left: 0
+
+    &__results
+      display: block
 
     &__line
       width: 83%
