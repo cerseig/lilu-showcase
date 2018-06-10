@@ -7,7 +7,7 @@
 
   <div class="landing__container" id="landing__container">
     <section class="section landing__wrapper landing__concept">
-      <div class="landing__part white" style="width:40%">
+      <div class="landing__part landing__part--smaller white">
         <%= image_tag 'icons/picto1.png', class: :landing__illu1 %>
         <div class="landing__content">
           <h1 class="landing__title">LI.LU ?</h1>
@@ -31,7 +31,7 @@
           </li>
         </ul>
       </div>
-      <div class="landing__part blue" style="width:60%">
+      <div class="landing__part landing__part--larger landing__media blue">
         <div class="landing__play-button">
           <div class="landing__play-button--icon"></div>
         </div>
@@ -39,8 +39,8 @@
     </section>
 
     <section class="section landing__wrapper landing__instructions">
-      <div class="landing__part landing__background" style="width:50%;background-image:url('images/mockup.jpg')"></div>
-      <div class="landing__part white" style="width:50%">
+      <div class="landing__part landing__part--half landing__background" style="background-image:url('images/mockup.jpg')"></div>
+      <div class="landing__part landing__part--half white">
         <%= image_tag 'icons/picto2.png', class: :landing__illu2 %>
         <div class="landing__content">
           <h1 class="landing__title">Comment <br>ça marche ?</h1>
@@ -88,7 +88,7 @@
     </section>
 
     <section class="section landing__wrapper landing__user-test">
-      <div class="landing__part white" style="width:60%">
+      <div class="landing__part landing__part--larger white">
         <%= image_tag 'icons/picto3.png', class: :landing__illu3 %>
         <div class="landing__content">
           <h1 class="landing__title">Testé, approuvé</h1>
@@ -113,18 +113,18 @@
           </li>
         </ul>
       </div>
-      <div class="landing__part landing__background" style="width:40%; background-image: url('images/paper-mockup.jpg')"></div>
+      <div class="landing__part landing__part--smaller landing__background" style="background-image: url('images/paper-mockup.jpg')"></div>
     </section>
 
     <section class="section landing__wrapper landing__contact">
-      <div class="landing__part white" style="width:50%">
+      <div class="landing__part landing__part--half white">
         <canvas class="landing__canvas" id="canvas"></canvas>
         <div class="landing__example" style="display:none">
           <%= image_tag 'smiley.gif', class: :landing__gif %>
           <button class="landing__draw-cta" type="button" name="button">Un petit dessin pour la fin</button>
         </div>
       </div>
-      <div class="landing__part blue" style="width:50%">
+      <div class="landing__part landing__part--half blue">
         <div class="landing__content">
           <h1 class="landing__title">L'équipe</h1>
           <div class="landing__squad">
@@ -223,7 +223,9 @@
       <div class="landing__full">
         <div class="landing__advertising">
           <h1 class="landing__advertising-title">Il est temps, rejoins LI.<span class="orange-emphasis">LU</span> !</h1>
-          <%= image_tag 'icons/library.svg', class: 'landing__advertising-icon' %>
+          <% link_to 'https://github.com/juliendargelos/lilu' do %>
+            <%= image_tag 'icons/library.svg', class: 'landing__advertising-icon' %>
+          <% end %>
         </div>
       </div>
     </section>

@@ -1,43 +1,47 @@
 #fp-nav
-  position: absolute
-  top: 0
-  right: 0
-  margin: 0!important
-  width: 50px
-  height: 100%
-  display: flex
-  justify-content: center
-  align-items: center
-
-.fp-tooltip.right
   display: none
 
-#fp-nav ul
-  text-align: center
+@media screen and (min-width: 765px)
+  #fp-nav
+    position: absolute
+    top: 0
+    right: 0
+    margin: 0!important
+    width: 50px
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
 
-#fp-nav ul li
-  margin: 50px 0
-  &:first-child
-    margin: 0
-    margin-top: -50px
+  .fp-tooltip.right
+    display: none
 
-#fp-nav ul li a
-  display: flex
-  justify-content: center
-  align-items: center
+  #fp-nav ul
+    text-align: center
 
-#fp-nav ul li a span
-  position: absolute
-  width: 8px
-  height: 8px
-  border-radius: 50%
-  border: 2px solid $light-grey
-  background: $light-grey
-  margin: 50px auto
-  cursor: pointer
-  transition: all 0.5s ease
+  #fp-nav ul li
+    margin: 50px 0
+    &:first-child
+      margin: 0
+      margin-top: -50px
 
-#fp-nav ul li a.active span
-  background: $orange
-  width: 15px
-  height: 15px
+  #fp-nav ul li a
+    display: flex
+    justify-content: center
+    align-items: center
+
+  #fp-nav ul li a span
+    position: absolute
+    width: 8px
+    height: 8px
+    border-radius: 50%
+    border: 2px solid $light-grey
+    background: $light-grey
+    margin: 50px auto
+    cursor: pointer
+    transition: all 0.5s ease
+
+  #fp-nav ul li a.active span
+    background: $orange
+    width: 15px
+    height: 15px
