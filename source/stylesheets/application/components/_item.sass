@@ -15,6 +15,7 @@
       margin-bottom: 50px
 
     &:last-child
+
       .landing__line
         left: 0
         right: initial
@@ -43,44 +44,5 @@
 
 @media screen and (min-width: 765px)
   .items
-    color: $blue
-    display: flex
-    justify-content: center
-    position: absolute
     bottom: 50px
     width: calc(100% - 100px)
-
-    &.landing__steps
-      position: relative
-      bottom: initial
-      width: 100%
-
-      &:first-child
-        margin-bottom: 50px
-
-      &:last-child
-        .landing__line
-          left: 0
-          right: initial
-
-  .item
-    text-align: center
-    flex: 1
-
-    &__number
-      font-family: $ysra
-
-    &__symbol
-      width: 7px
-      height: 7px
-      border-radius: 50%
-      background: $orange
-      margin: 10px auto
-      transition: all 0.5s ease
-
-    &__title
-      font-size: 10px
-      letter-spacing: 1px
-      line-height: 14px
-      width: 90%
-      margin: 0 auto
