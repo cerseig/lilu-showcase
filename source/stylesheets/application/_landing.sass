@@ -287,6 +287,21 @@
   &__advertising-icon
     width: 60px
 
+  &__footer
+    position: absolute
+    bottom: -5%
+    display: flex
+
+  &__logo-gobelins
+    width: 80px
+    flex: 1
+    margin-right: 5px
+
+  &__logo-cci
+    width: 120px
+    flex: 1
+    margin-left: 5px
+
   .orange-emphasis
     color: $orange
 
@@ -393,13 +408,13 @@
         width: 50%
 
     &__illu1
-      width: 250px
+      width: 60%
 
     &__illu2
-      width: 400px
+      width: 90%
 
     &__illu3
-      width: 500px
+      width: 90%
 
     &__title
       font-size: 30px
@@ -442,3 +457,43 @@
 
     &__advertising-icon
       width: 80px
+
+@media screen and (min-width: 1000px)
+  .landing
+
+@media screen and (min-width: 1300px)
+  .landing
+
+    &__title
+      font-size: 3em
+      line-height: 1.2em
+
+    &__hood
+      font-size: 1.5em
+      line-height: 1.8em
+
+    &__description:last-child
+      font-size: 1.3em
+      line-height: 1.8em
+
+    &__line
+      top: 37px
+
+    &__illu3
+      top: -200px
+      right: -220px
+
+    &__advertising-title
+      font-size: 3em
+      line-height: 1.3em
+      width: 400px
+
+    &__profils
+
+      &:last-child
+        margin-top: -120px
+
+      .profil
+
+        &:last-child
+          margin-bottom: 0
