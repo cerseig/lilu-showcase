@@ -49,6 +49,16 @@
         	}
         });
 
+        $('.landing__play-button').on('click', function() {
+          if($('.landing__video').get(0).paused) {
+            $('.landing__play-button').css('opacity', '0')
+            $('.landing__video').get(0).play();
+          } else {
+            $('.landing__play-button').css('opacity', '1')
+            $('.landing__video').get(0).pause();
+          }
+        })
+
         $('.landing__draw-cta').on('click', function(){
           console.log('test click button');
           $('.landing__example').css('opacity', '0')

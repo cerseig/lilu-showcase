@@ -34,6 +34,9 @@
         </div>
       </div>
       <div class="landing__part landing__part--larger landing__media blue">
+        <video class="landing__video" poster="images/poster.png" preload>
+            <source src="video/teaser.mp4" />
+        </video>
         <div class="landing__play-button">
           <div class="landing__play-button--icon"></div>
         </div>
@@ -249,8 +252,12 @@
       </div>
       <div class="landing__footer">
         <div class="landing__logos">
-          <%= image_tag 'logos/logo_gobelins-white.png', class: 'landing__logo-gobelins' %>
-          <%= image_tag 'logos/logo_cci-white.png', class: 'landing__logo-cci' %>
+          <% link_to 'https://www.gobelins.fr/formation/bddi-bachelor-designer-developpeur-interactif-cycle-1-option-graphisme-ou-developpement' do %>
+            <%= image_tag 'logos/logo_gobelins-white.png', class: 'landing__logo-gobelins' %>
+          <% end %>
+          <% link_to 'http://www.cci.fr/' do %>
+            <%= image_tag 'logos/logo_cci-white.png', class: 'landing__logo-cci' %>
+          <% end %>
         </div>
       </div>
     </section>
